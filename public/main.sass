@@ -2,7 +2,47 @@
     padding: 0
     margin: 0
     box-sizing: border-box
+    border: none
+    font-family: 'PT Sans', sans-serif
+    font-size: 0.8rem
     
-.container
+.wrapper
+    display: flex
     width: 100vw
-    max-width: 700px
+    height: 100vh
+    justify-content: center
+    align-items: center
+
+    .container
+        width: 40vw
+        height: 80vh
+        display: flex
+        flex-direction: column
+        background-color: #25323e
+        border-radius: 2%
+
+        .chat-window
+            flex-grow: 1
+            p
+                color: #fff
+                padding: 0.1rem 0.4rem
+            #output>p
+                border-bottom: 1px solid #3f5161
+        
+        .message-box
+            width: 100%
+            display: flex
+            border-top: 1px solid #3f5161
+            padding: 0.5rem 0.3rem
+            #message, #send
+                background-color: #25323e
+                border-radius: 2%
+            #message
+                flex-grow: 4
+                padding-left: 0.2rem
+                color: #fff
+                &:focus
+                    outline: none
+            #send
+                flex-grow: 1
+                outline: none
